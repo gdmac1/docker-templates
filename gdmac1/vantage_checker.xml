@@ -1,0 +1,68 @@
+
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>VantageChecker</Name>
+  <Repository>gdmac1/vantage_checker</Repository>
+  <Registry>https://hub.docker.com/repository/docker/gdmac1/vantage_checker</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Project/>
+  <Overview>pulls the latest image from https://github.com/gdmac1/VantageChecker.&#xD;
+&#xD;
+Periodically checks MyVantage.co.uk and lets me know if there is a future booking via Pushover</Overview>
+  <Category>Tools: Status:Beta</Category>
+  <WebUI>http://[IP]:[PORT:5001]/</WebUI>
+  <TemplateURL>https://github.com/gdmac1/docker-templates/vantage_checker.xml</TemplateURL>
+  <Icon/>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1625737572</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description>pulls the latest image from https://github.com/gdmac1/VantageChecker.&#xD;
+&#xD;
+Periodically checks MyVantage.co.uk and lets me know if there is a future booking via Pushover</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>5001</HostPort>
+        <ContainerPort>80</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data/>
+  <Environment>
+    <Variable>
+      <Value></Value>
+      <Name>VANTAGEID</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>VANTAGEPASSWORD</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>PUSHOVER_APP_TOKEN</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>PUSHOVER_USER_KEY</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="Vantage Username" Target="VANTAGEID" Default="" Mode="" Description="user ID for myvantage.co.uk" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Vantage Password" Target="VANTAGEPASSWORD" Default="" Mode="" Description="user password for myvantage.co.uk" Type="Variable" Display="always" Required="false" Mask="true"></Config>
+  <Config Name="Pushover App Token" Target="PUSHOVER_APP_TOKEN" Default="" Mode="" Description="App token setup at pushover.net" Type="Variable" Display="always" Required="false" Mask="true"></Config>
+  <Config Name="Pushover user key" Target="PUSHOVER_USER_KEY" Default="" Mode="" Description="user key for pushover account" Type="Variable" Display="always" Required="false" Mask="true"></Config>
+  <Config Name="UI Port" Target="80" Default="5001" Mode="tcp" Description="UI Port" Type="Port" Display="always" Required="false" Mask="false">5001</Config>
+</Container>
